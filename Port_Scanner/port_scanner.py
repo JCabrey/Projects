@@ -87,7 +87,7 @@ def save_results(target, open_ports, duration):
 
 # Main program loop
 def main():
-    print("Welcome to the Enhanced Port Scanner!")
+    print("Welcome to the Jacob's Port Scanner!")
     target = input("Enter the target IP or hostname: ").strip()
     start_port = int(input("Enter the starting port (default 1): ") or 1)
     end_port = int(input("Enter the ending port (default 1024): ") or 1024)
