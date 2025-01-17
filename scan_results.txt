@@ -1,0 +1,4 @@
+Scan Results for localhost
+Scan Duration: 0:00:05.092471
+
+No open ports found.
