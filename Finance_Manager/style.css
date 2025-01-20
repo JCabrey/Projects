@@ -1,0 +1,347 @@
+/**
+ * Applies default margin, padding, font, and box-sizing 
+ * to all elements to ensure consistent styling.
+* Author: Jacob C
+* Date: 1/20/2025
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Banner Section
+* Styles the background image, text, buttons, height,
+* and centers the alignment of the content.
+*/
+#banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/background.jpeg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+/**
+ * Styles the logo, text, and buttons in the banner section.
+ * logo was having aligning issues, so for the precise placement.
+ * So at this time it was removed.
+ */
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 30%; /* Adjusted for precise placement */
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.banner-text h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.banner-text p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+.banner-btn {
+    display: flex;
+    gap: 15px;
+}
+
+.banner-btn a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.banner-btn a:hover {
+    background: white;
+    color: #007BFF;
+}
+
+/* Navigation */
+#sideNav {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px;
+    top: 0;
+    background: #007BFF;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+#sideNav nav ul {
+    list-style: none;
+    padding: 20px;
+}
+
+#sideNav nav ul li {
+    margin: 30px 0;
+}
+
+#sideNav nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    display: block;
+    transition: 0.3s;
+}
+
+#sideNav nav ul li a:hover {
+    color: #FFD700;
+}
+
+#menuBtn {
+    width: 60px;
+    height: 60px;
+    background: url('images/better menu.png') center/cover no-repeat;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 50%;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#menuBtn img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* Close Button */
+#menuBtn.close {
+    background: url('images/close.jpeg') center/cover no-repeat;
+    border-radius: 50%;
+}
+
+/* Features Section */
+#features {
+    padding: 60px 10%;
+    background: linear-gradient(to bottom, #f7f9fc, #ffffff);
+    text-align: center;
+}
+
+.title-text h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.feature-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.features {
+    background: #fff;
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.features:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.features h1,
+.features-desc p {
+    opacity: 1;
+    transition: none;
+}
+
+.features h1 {
+    font-size: 1.8em;
+    margin: 15px 0;
+    color: #007BFF;
+}
+
+.features-desc {
+    margin-top: 10px;
+    color: #666;
+}
+
+.features-desc p {
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.feature-icon .fa {
+    font-size: 2.5em;
+    color: #007BFF;
+    margin-bottom: 15px;
+}
+
+.features-img img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Tools Section */
+#tools {
+    padding: 50px 10%;
+    background: #FFFFFF;
+}
+
+.service-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.single-service {
+    flex: 1;
+    max-width: 45%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.single-service:hover {
+    transform: translateY(-10px);
+}
+
+.single-service img {
+    width: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.single-service:hover .overlay {
+    opacity: 1;
+}
+
+.service-desc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.service-desc h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.service-desc p {
+    font-size: 1em;
+}
+
+/* Testimonials Section */
+#testimonial {
+    padding: 50px 10%;
+    background: #F9F9F9;
+    text-align: center;
+}
+
+.testimonial-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.testimonial-col {
+    flex: 1;
+    max-width: 30%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.testimonial-col:hover {
+    transform: translateY(-10px);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info h4 {
+    font-size: 1.2em;
+    color: #007BFF;
+}
+
+/* Footer Section */
+#footer {
+    font-size: 1.2em;
+    padding: 50px 10%;
+    color: rgb(228, 243, 28);
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7) url('images/footer.jpg') center/cover no-repeat;
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-left,
+.footer-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.footer-left h1, .footer-right h1 {
+    margin-bottom: 15px;
+}
+
+.footer-left p, .footer-right p {
+    margin: 10px 0;
+}
